@@ -193,21 +193,18 @@ bool Base::setTorque(const object& o){
 object Base::ErrorStatus(){
 
 	youbot::ErrorAndStatus  status;
-	string::size_type k  = 0;
-	std::vector<double> wheelstatus;
-	std::string value,finalstatus;
+	std::vector<unsigned int> wheelstatus;
+	std::string value;
+	char buffer[20];
 	wheelstatus.resize(4);
 	for(std::size_t i=0;i<4;i++){
 		this->youBotBase->getBaseJoint(i+1).getConfigurationParameter(status);
 		status.toString(value);
-		value.c_str();
-		for (string::size_type j = 16; j < value.length(); j++){
-			finalstatus[k] = value[j];
-			std::cout << value[j] << std::endl;
-			k++;
-		}
-			
-		std::cout << finalstatus << std::endl;
+		std::size_t length = value.copy(buffer,4,17);
+  		buffer[length]='\0';
+		wheelstatus[i] = atoi(buffer);
+		//std::cout << wheelstatus[i] << std::endl;
+		
 	}
 	
         return PyArray(wheelstatus);

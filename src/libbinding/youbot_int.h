@@ -67,30 +67,23 @@
 // Contains all the required headers and the inline templates for python conversion
 
 
-//ALL FAULT CODES NEEDS TO BE DEFINED HERE (currently defines 8 levels of severity)
+//ALL FAULT CODES NEEDS TO BE DEFINED HERE 
 /*
 
-Bit 0   --   SOFT JOINT LIMITS EXCEEDED 
-Bit 1   --   HARD JOINT LIMITS EXCEEDED
-Bit 2   --   HALL SENSOR DEFECT
-Bit 3   --   OVER CURRENT (OC)
-Bit 4   --   OVER TEMPERATURE (OT)
-Bit 5   --   USER DEFINED BIT 1   
-Bit 6   --   USER DEFINED BIT 2
-Bit 7   --   USER DEFINED BIT 3
-Bit 8   --   USER DEFINED BIT 4
-Bit 10  --   FAULT SET IN THE CURRENT RUN
-Bit 11  --   FAULT SET AND CLEARED IN THE CURRENT RUN
-Bit 12  --   FAULT SET ATLEAST ONCE (STORED IN EEPROM)
-Bit 13  --   FAULT CODE SEVERITY NUMBER BIT0
-Bit 14  --   FAULT CODE SEVERITY NUMBER BIT1
-Bit 15  --   FAULT CODE SEVERITY NUMBER BIT2
+Bit 0: Overcurrent flag. This flag is set if overcurrent limit is exceeded.
+Bit 1: Undervoltage flag. This flag is set if supply voltage to low for motor operation.
+Bit 2: Overvoltage flag. This flag is set if the motor becomes switched off due to overvoltage.
+Bit 3: Overtemperature flag. This flag is set if overtemperature limit is exceeded.
+Bit 4: Motor halted flag. This flag is set if motor has been switched off.
+Bit 5: Hall error flag. This flag is set upon a hall error.
+Bit 6: Encoder error flag. This flag is set upon an encoder error.
+Bit 7: Winding error flag. [currently not used]
+Bit 8: Cycle time violation. [currently not used]
+Bit 9: Initialization error of sine commutation. This flag is set if initialization is failed.
+Bit 10: Position mode flag. This flag is set when the module is in positioning mode.
+Bit 11: Position end flag. This flag becomes set if the motor has been stopped at the end position.
 
 
-static unsigned int FC_JOINTMOTOR_2;
-static unsigned int FC_JOINTMOTOR_3;
-static unsigned int FC_JOINTMOTOR_4;
-static unsigned int FC_JOINTMOTOR_5;
 */
 
 namespace YOUBOTPYTHON{
@@ -116,6 +109,17 @@ template <typename T>
       		npy_intp size = vec.size();  // Assumes that the vector size is never zero
 		double * data = size ? const_cast<double *>(&vec[0]) : static_cast<double *>(NULL);
       		PyObject * pyObj = PyArray_SimpleNewFromData( 1, &size, NPY_DOUBLE, data );
+      		boost::python::handle<> handle( pyObj );
+      		boost::python::numeric::array arr( handle );
+		return arr.copy();
+  	};
+
+/* To convert std::vector<unsigned int> to python array*/
+	inline object PyArray( std::vector<unsigned int> const& vec )
+	{
+      		npy_intp size = vec.size();  // Assumes that the vector size is never zero
+		unsigned int * data = size ? const_cast<unsigned int *>(&vec[0]) : static_cast<unsigned int *>(NULL);
+      		PyObject * pyObj = PyArray_SimpleNewFromData( 1, &size, NPY_UINT32, data );
       		boost::python::handle<> handle( pyObj );
       		boost::python::numeric::array arr( handle );
 		return arr.copy();
