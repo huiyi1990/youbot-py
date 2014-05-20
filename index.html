@@ -1,238 +1,68 @@
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>youBot-py (Under Development) &mdash; youbot-py 0.1.0 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="youbot-py 0.1.0 documentation" href="#" /> 
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>youBot-py by BRSU-AutonomousSystems</title>
   </head>
+
   <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li><a href="#">youbot-py 0.1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+    <header>
+      <div class="inner">
+        <h1>youBot-py</h1>
+        <h2>A Python Wrapper for youbot_driver</h2>
+        <a href="https://github.com/BRSU-AutonomousSystems/youbot-py" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="youbot-py-under-development">
-<h1>youBot-py (Under Development)<a class="headerlink" href="#youbot-py-under-development" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><strong>The first stable release 0.1.0 was made available on 19.01.2014</strong></li>
-<li><strong>The next stable release 0.2.0 will be made available on 30.01.2014</strong></li>
-</ul>
-<p>For the changes happening, refer to <a class="reference internal" href="changelog.html#changelog"><em>ChangeLog</em></a></p>
-<img alt="_images/youbot.png" class="align-center" src="_images/youbot.png" style="height: 300px;" />
-<p>This wrapper is intended as python library for youbot :</p>
-<ul class="simple">
-<li>The youbot-py is a pure python wrapper for youbot.</li>
-<li>Developing a python wrapper for youBot with out any dependency of framework was the aim of this wrapper.</li>
-<li>In order to request new features, please raise ticket to <a class="reference external" href="mailto:hotline&#37;&#52;&#48;youbot-store&#46;com">hotline<span>&#64;</span>youbot-store<span>&#46;</span>com</a>.</li>
-<li>For help in installation and reporting issues, add a issue in git hub <a class="reference external" href="https://github.com/praman2s/youbot-py/issues">https://github.com/praman2s/youbot-py/issues</a></li>
-</ul>
-<div class="toctree-wrapper compound">
-<ul class="simple">
-</ul>
-</div>
-<div class="section" id="major-releases">
-<h2>Major Releases<a class="headerlink" href="#major-releases" title="Permalink to this headline">¶</a></h2>
-<p>The major releases does not include or plan for bug fixes.
-The bug fix release will happen as soon as a bug is found</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="24%" />
-<col width="49%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Month-year</th>
-<th class="head">Release</th>
-<th class="head">Functions</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Jan19-2014</td>
-<td>V0.1</td>
-<td>Support for Arm</td>
-</tr>
-<tr class="row-odd"><td>Jan30-2014</td>
-<td>V0.2</td>
-<td>Support for Base</td>
-</tr>
-<tr class="row-even"><td>Feb15-2014</td>
-<td>V0.3</td>
-<td>Whole Body Support (FSM support)</td>
-</tr>
-<tr class="row-odd"><td>Feb28-2014</td>
-<td>V1.0</td>
-<td>Final Release with maintanence</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>Please follow the below installation instructions:</p>
-<p>Building and Installing the wrapper:</p>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p>.. youbot-py documentation master file, created by
+   sphinx-quickstart on Sun Dec 22 13:18:19 2013.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root <code>toctree</code> directive.</p>
+
+<h1>
+<a name="youbot-py-under-development" class="anchor" href="#youbot-py-under-development"><span class="octicon octicon-link"></span></a>youBot-py (Under Development)</h1>
+
 <ul>
-<li><p class="first">Build and Install.</p>
-<blockquote>
-<div><ul class="simple">
-<li>git clone <a class="reference external" href="https://github.com/praman2s/youbot-py.git">https://github.com/praman2s/youbot-py.git</a></li>
-<li>cd youbot-py</li>
-<li>sh configure.sh</li>
-<li>python setup.py build &#8211;build-base=.</li>
-<li>sudo bash</li>
-<li>python setup.py install</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-<p>Now the wrapper is ready to be tested.</p>
-</div>
-<div class="section" id="manual">
-<h1>Manual<a class="headerlink" href="#manual" title="Permalink to this headline">¶</a></h1>
-<p>The whole wrapper is divided into three parts:</p>
-<ul class="simple">
-<li>Communication with youbot.</li>
-<li>Getters and Setters for youbot arm.</li>
-<li>Getters and setters for youbot base.</li>
-</ul>
-<div class="section" id="communication-with-youbot">
-<h2>Communication with youbot<a class="headerlink" href="#communication-with-youbot" title="Permalink to this headline">¶</a></h2>
-<p>This sets up the communication between PC and youBot ethercat drivers:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">youbotpy</span> <span class="kn">import</span> <span class="o">*</span>     <span class="c"># Imports all the modules that are being exposed</span>
-<span class="n">robot</span> <span class="o">=</span> <span class="n">robot</span><span class="p">()</span>            <span class="c"># Tries to establish connection, if not throws exception</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">Calibrate</span><span class="p">()</span>          <span class="c"># Optional. For some users who want candle positon as initial pose.</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="getters-and-setters-for-youbot-arm-available">
-<h2>Getters and Setters for youbot arm (Available)<a class="headerlink" href="#getters-and-setters-for-youbot-arm-available" title="Permalink to this headline">¶</a></h2>
-<p>The wrapper allows you to work with arm alone. Config files have to altered accordingly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">arm</span>  <span class="o">=</span> <span class="n">arm</span><span class="p">()</span>                    <span class="c"># Get the first arm connected.</span>
-<span class="n">arm</span><span class="o">.</span><span class="n">GetJointValues</span><span class="p">()</span>            <span class="c"># Returns the current joint value as 5x1 array.</span>
-<span class="n">arm</span><span class="o">.</span><span class="n">SetJointValues</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>       <span class="c"># Sets joint values. value should be 5x1 array.</span>
-<span class="n">arm</span><span class="o">.</span><span class="n">GetVelocityValues</span><span class="p">()</span>         <span class="c"># Returns the current joint velocity as 5x1 array.</span>
-<span class="n">arm</span><span class="o">.</span><span class="n">SetVelocityValues</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>    <span class="c"># Sets joint velocity values. value should be 5x1 array.</span>
-<span class="n">arm</span><span class="o">.</span><span class="n">GetTorqueValues</span><span class="p">()</span>           <span class="c"># Returns the current joint torque values as 5x1 array.</span>
-<span class="n">arm</span><span class="o">.</span><span class="n">SetTorqueValues</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>      <span class="c"># Sets joint toruque values. value should be 5x1 array.</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="getters-and-setters-for-youbot-base-for-0-2-0">
-<h2>Getters and Setters for youbot base (for 0.2.0)<a class="headerlink" href="#getters-and-setters-for-youbot-base-for-0-2-0" title="Permalink to this headline">¶</a></h2>
-<p>The wrapper allows you to work with base alone. Config files have to altered accordingly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">base</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">GetBase</span><span class="p">()</span>          <span class="c"># Tries to check if the base is connected.</span>
-<span class="n">base</span><span class="o">.</span><span class="n">SetVelocity</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">theta</span><span class="p">])</span>   <span class="c"># Sets the base velocity to x,y and theta.</span>
-<span class="n">base</span><span class="o">.</span><span class="n">GetVelocity</span><span class="p">()</span>              <span class="c"># Returns a 3x1 (x,y,\theta) velocity vector.</span>
-<span class="n">base</span><span class="o">.</span><span class="n">GetPose</span><span class="p">()</span>                  <span class="c"># Returns the pose info based on odometry.</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<p>This is an example file where it takes three lines to get connected to youBot:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">youbotpy</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c">#exposes youbot_driver to python</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<li><strong>The first stable release 0.1.0 - Support for Arm</strong></li>
+<li><strong>The second stable release 0.2.0 - Support for Base - 30.1.2014</strong></li>
+</ul><p>.. image:: youbot.png
+    :height: 300
+    :align: center</p>
 
-<span class="n">robot</span> <span class="o">=</span> <span class="n">arm</span><span class="p">()</span>    <span class="c"># Calls the constructor . Important to call at the begining</span>
-<span class="c">#robot.Calibrate()  # Sets the robot in candle position and sets encoder to zero</span>
-<span class="n">joint_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c"># some position that of the arm that the user demands</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">SetArmJointValues</span><span class="p">(</span><span class="n">joint_values</span><span class="p">)</span> <span class="c"># sets the joint values</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<p>For more info :  <a href="http://praman2s.github.io/youbot-py/">http://praman2s.github.io/youbot-py/</a></p>
+        </section>
 
-<span class="k">print</span> <span class="s">&quot;End of Hello World..!!!&quot;</span>
-</pre></div>
-</div>
-<a href="https://github.com/praman2s/youbot-py.git"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a></div>
+        <aside id="sidebar">
+          <a href="https://github.com/BRSU-AutonomousSystems/youbot-py/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/BRSU-AutonomousSystems/youbot-py/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
+          <p class="repo-owner"><a href="https://github.com/BRSU-AutonomousSystems/youbot-py"></a> is maintained by <a href="https://github.com/BRSU-AutonomousSystems">BRSU-AutonomousSystems</a>.</p>
 
-          </div>
-        </div>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">youBot-py (Under Development)</a><ul>
-<li><a class="reference internal" href="#major-releases">Major Releases</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#manual">Manual</a><ul>
-<li><a class="reference internal" href="#communication-with-youbot">Communication with youbot</a></li>
-<li><a class="reference internal" href="#getters-and-setters-for-youbot-arm-available">Getters and Setters for youbot arm (Available)</a></li>
-<li><a class="reference internal" href="#getters-and-setters-for-youbot-base-for-0-2-0">Getters and Setters for youbot base (for 0.2.0)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-</ul>
+    </div>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li><a href="#">youbot-py 0.1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2013-14, Locomotec GmBH, Hochschule Bonn-Rhien-Sieg.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
-    </div>
+  
   </body>
 </html>
