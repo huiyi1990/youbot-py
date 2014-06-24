@@ -67,21 +67,6 @@ bool Base::setVelocity(const object& o){
 	return true;
 }
 
-bool Base::setBaseWrench(const object& o){
-	
-	std::vector<double> BaseWrench;
-	BaseVelocity = ExtractArray<double>(o);	
-	quantity<si::force> f_x,f_y;
-	quantity<si::torque> tau;
-	BaseWrench.resize(3);
-	
-	f_x = BaseWrench[0]*newton;
-	f_y = BaseWrench[1]*newton;
-	tau = BaseWrench[2]*newton_meter;
-	
-	this->youBotBase->setBaseWrench(f_x,f_y,tau);
-	return true;
-}
 
 object Base::Odometry(){
 	
