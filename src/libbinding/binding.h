@@ -73,6 +73,7 @@ public:
 	bool startcalib(){ return false;};
 	bool setTorque(const object& o);
 	bool setVelocity(const object& o);
+	bool setBaseWrench(const object& o);
 	object Odometry();
 	bool setRelativePose(const object& o);
 	object getWheelVelocities();
